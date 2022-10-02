@@ -14,6 +14,7 @@
     <title>LimitlessWP Wordpress Theme</title>
 </head>
 <body>
-    
+    <header>This is the website header</header>
+    <footer>This is the website footer</footer>
 </body>
 </html>
