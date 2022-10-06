@@ -6,6 +6,8 @@
  */
 ?>
     <footer>This is the website footer</footer>
-    <?php wp_footer() ?>
+    </div> <!-- #content .site-content end -->
+</div><!-- #page .site end -->
+<?php wp_footer() ?>
 </body>
 </html>
