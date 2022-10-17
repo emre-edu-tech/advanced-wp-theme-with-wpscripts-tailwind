@@ -5,6 +5,21 @@
  * @package LimitlessWP
  */
 
+// defined() checks whether a constant is already defined
+if(!defined('LIMITLESSWP_DIR_PATH')) {
+    define('LIMITLESSWP_DIR_PATH', get_template_directory());
+}
+
+// include the autoloader then there is no need to include the classes and traits manually
+require_once LIMITLESSWP_DIR_PATH . '/inc/helpers/autoloader.php';
+
+function limitlesswp_get_theme_instance() {
+    // Load the main theme class using Singleton trait
+    \LimitlessWP_Theme\Inc\LimitlessWP_Theme::get_instance();
+}
+
+limitlesswp_get_theme_instance();
+
 // IMPORTANT NOTE: Prefix all the functions in functions.php file with the prefix limitlesswp
 // Add stylesheet and scripts
 function limitlesswp_load_scripts() {
