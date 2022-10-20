@@ -7,7 +7,18 @@
  */
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="<?php echo site_url('/') ?>">
+        <?php
+            // Custom markup for the logo
+            $custom_logo_id = get_theme_mod('custom_logo');
+            $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+            if(has_custom_logo()) { ?>
+                <img class="custom-logo" src="<?php echo esc_url($logo[0]) ?>" alt="<?php echo get_bloginfo('name') ?>">
+            <?php } else {
+                echo get_bloginfo('name');
+            }
+        ?>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
