@@ -16,8 +16,9 @@ class LimitlessWP_Theme {
     protected function __construct() {
         // Load other classes here in main class construct method
         Assets::get_instance();
+        Menus::get_instance();
 
-        // Action and Filter Hooks
+        // Action and Filter Hooks for this class
         $this->setup_hooks();
     }
 
@@ -66,5 +67,23 @@ class LimitlessWP_Theme {
             'script',
             'style',   
         ]);
+
+        // Allows theme developers to link a custom stylesheet file to the TinyMCE visual editor.
+        // Default stylesheet is editor-style.css
+        add_editor_style();
+
+        // Useful to load your styles for the Gutenberg editor screen
+        add_theme_support('wp-block-styles');
+
+        // Gives the option for some of the Gutenberg blocks to be aligned as wide and full width
+        add_theme_support('align-wide');
+
+        // Default Gutenberg editor width is 610px which is narrow. To change it use the 
+        // $content_width global variable
+        // Set the max-width for the content
+        global $content_width;
+        if(!isset($content_width)) {
+            $content_width = 1200;
+        }
     }
 }

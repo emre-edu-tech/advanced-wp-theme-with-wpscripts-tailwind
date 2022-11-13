@@ -17,7 +17,7 @@
     // returns an existing instance of a class
     // here final is used because it should not be overriden by any class
     final public static function get_instance() {
-        // holds the collection of the instances of the classes
+        // holds the collection of the instances of the called classes
         static $instance = [];
 
         $called_class = get_called_class();     // returns the name of the class that has been called

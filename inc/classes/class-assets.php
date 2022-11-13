@@ -15,6 +15,7 @@ class Assets {
     use Singleton;
 
     public function __construct() {
+        // action and filters for this class
         $this->setup_hooks();
     }
 
