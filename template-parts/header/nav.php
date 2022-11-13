@@ -5,6 +5,12 @@
  * 
  * @package LimitlessWP
  */
+
+use LimitlessWP_Theme\Inc\Menus;
+
+$menu_class = Menus::get_instance();
+$header_menu_id = $menu_class->get_menu_id('limitlesswp-header-menu');
+$header_menu_items = wp_get_nav_menu_items($header_menu_id);
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="<?php echo site_url('/') ?>">
@@ -52,3 +58,9 @@
         </form>
     </div>
 </nav>
+
+<?php
+    wp_nav_menu([
+        'theme_location' => 'limitlesswp-header-menu',
+    ])
+?>
