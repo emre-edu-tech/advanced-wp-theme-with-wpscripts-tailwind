@@ -18,3 +18,30 @@
     height: 75px;
 }
 /* End Custom Logo Styles */
+
+/* Bootstrap Customize */
+
+li.dropdown i {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    li.dropdown i {
+        display: inline;
+    }
+
+    a.nav-link.dropdown-toggle::after {
+        display: none;
+    }
+
+    .dropdown a.nav-link.dropdown-toggle {
+        display: inline-block;
+        margin-right: .5rem;
+    }
+}

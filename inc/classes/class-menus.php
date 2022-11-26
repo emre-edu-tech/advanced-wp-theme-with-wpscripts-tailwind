@@ -40,4 +40,17 @@ class Menus {
 
         return !empty($menu_id) ? $menu_id : null;
     }
+
+    // $menu_items_arr includes all the menu items, both child and parent
+    public function get_child_menu_items($menu_items_arr, $parent_id) {
+        $child_menu_items = [];
+        if(!empty($menu_items_arr) && is_array($menu_items_arr)) {
+            foreach($menu_items_arr as $menu_item) {
+                if(intval($menu_item->menu_item_parent) === $parent_id) {
+                    array_push($child_menu_items, $menu_item);
+                }
+            }
+        }
+        return $child_menu_items;
+    }
 }

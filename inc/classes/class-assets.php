@@ -35,8 +35,10 @@ class Assets {
         // Register Styles
         wp_register_style('limitlesswp-bootstrap-styles', LIMITLESSWP_URI_PATH . '/assets/src/library/css/bootstrap.min.css', [], '4.6', 'all');
         wp_register_style('limitlesswp-main-styles', get_stylesheet_uri(), [], filemtime(LIMITLESSWP_DIR_PATH . '/style.css'), 'all');
+        wp_register_style('limitlesswp-font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', [], '6.2', 'all');
 
         // Enqueue Styles
+        wp_enqueue_style('limitlesswp-font-awesome');
         wp_enqueue_style('limitlesswp-bootstrap-styles');
         wp_enqueue_style('limitlesswp-main-styles');
     }
