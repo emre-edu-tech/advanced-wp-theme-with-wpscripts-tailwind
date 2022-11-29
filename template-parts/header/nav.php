@@ -35,24 +35,37 @@ $header_menu_items = wp_get_nav_menu_items($header_menu_id);
                 <ul class="navbar-nav mr-auto">
                     <?php
                         foreach($header_menu_items as $menu_item) {
+                            $menu_item_classes = '';
+                            // get the current menu slug and compare one by one
+                            if($menu_item->object_id == get_queried_object_id()) {
+                                $menu_item_classes = implode(' ', $menu_item->classes);
+                                $menu_item_classes .= 'current_menu_item active';   
+                            }
                             if(!$menu_item->menu_item_parent) {
                                 $child_menu_items = $menu_object->get_child_menu_items($header_menu_items, $menu_item->ID);
                                 $has_children = !empty($child_menu_items) && is_array($child_menu_items);
                                 if(!$has_children) {?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo esc_url($menu_item->url) ?>">
+                                        <a class="nav-link <?php echo !empty($menu_item_classes) ? $menu_item_classes : '' ?>" href="<?php echo esc_url($menu_item->url) ?>">
                                             <?php echo esc_html($menu_item->title) ?>
                                         </a>
                                     </li>
                                 <?php } else { ?>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="<?php echo esc_url($menu_item->url) ?>" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle <?php echo !empty($menu_item_classes) ? $menu_item_classes : '' ?>" href="<?php echo esc_url($menu_item->url) ?>" role="button" data-toggle="dropdown" aria-expanded="false">
                                             <?php echo esc_html($menu_item->title) ?>
                                         </a>
                                         <i class="fa-solid fa-caret-down"></i>
                                         <div class="dropdown-menu">
-                                            <?php foreach($child_menu_items as $child_menu_item) { ?>
-                                                <a class="dropdown-item" href="<?php echo esc_url($child_menu_item->url) ?>"><?php echo esc_html($child_menu_item->title) ?></a>
+                                            <?php foreach($child_menu_items as $child_menu_item) { 
+                                                $child_menu_item_classes = '';
+                                                // get the current menu slug and compare one by one
+                                                if($child_menu_item->object_id == get_queried_object_id()) {
+                                                    $child_menu_item_classes = implode(' ', $child_menu_item->classes);
+                                                    $child_menu_item_classes .= 'current_menu_item active';   
+                                                }
+                                                ?>
+                                                <a class="dropdown-item <?php echo !empty($child_menu_item_classes) ? $child_menu_item_classes : '' ?>" href="<?php echo esc_url($child_menu_item->url) ?>"><?php echo esc_html($child_menu_item->title) ?></a>
                                            <?php } ?>
                                         </div>
                                     </li>  
@@ -69,9 +82,3 @@ $header_menu_items = wp_get_nav_menu_items($header_menu_id);
         </form>
     </div>
 </nav>
-
-<?php
-    wp_nav_menu([
-        'theme_location' => 'limitlesswp-header-menu',
-    ])
-?>

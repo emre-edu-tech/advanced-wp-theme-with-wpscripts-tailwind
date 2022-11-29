@@ -20,9 +20,20 @@
 /* End Custom Logo Styles */
 
 /* Bootstrap Customize */
-
 li.dropdown i {
     display: none;
+}
+
+.dropdown-menu {
+	padding: 0;
+}
+
+.dropdown-item {
+	padding: .5rem .6rem;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+	color: rgba(0, 0, 0, .5);
 }
 
 @media screen and (min-width: 768px) {
