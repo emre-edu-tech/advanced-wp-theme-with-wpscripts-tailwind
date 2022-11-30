@@ -26,6 +26,7 @@ li.dropdown i {
 
 .dropdown-menu {
 	padding: 0;
+    margin-top: 0;
 }
 
 .dropdown-item {

@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     // Custom coded desktop and mobile dropdown functionality
-    // This code is important for the Bootstrap navbar to behave diffrent for desktop and mobile
+    // This code is important for the Bootstrap navbar to behave different for desktop and mobile
     // Managing the dropdown for navbar for both mobile and desktop views
     const parentMenuItemLink = jQuery('a.nav-link.dropdown-toggle')
     if (jQuery(window).width() > 768) {

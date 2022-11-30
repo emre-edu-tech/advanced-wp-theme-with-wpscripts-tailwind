@@ -11,6 +11,9 @@ use LimitlessWP_Theme\Inc\Menus;
 $menu_object = Menus::get_instance();
 $header_menu_id = $menu_object->get_menu_id('limitlesswp-header-menu');
 $header_menu_items = wp_get_nav_menu_items($header_menu_id);
+// echo '<pre>';
+// print_r($header_menu_items);
+// echo '</pre>';
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="<?php echo site_url('/') ?>">
@@ -35,13 +38,13 @@ $header_menu_items = wp_get_nav_menu_items($header_menu_id);
                 <ul class="navbar-nav mr-auto">
                     <?php
                         foreach($header_menu_items as $menu_item) {
-                            $menu_item_classes = '';
-                            // get the current menu slug and compare one by one
-                            if($menu_item->object_id == get_queried_object_id()) {
-                                $menu_item_classes = implode(' ', $menu_item->classes);
-                                $menu_item_classes .= 'current_menu_item active';   
-                            }
                             if(!$menu_item->menu_item_parent) {
+                                $menu_item_classes = '';
+                                // get the current menu slug and compare one by one
+                                if($menu_item->object_id == get_queried_object_id()) {
+                                    $menu_item_classes = implode(' ', $menu_item->classes);
+                                    $menu_item_classes .= 'current-menu-item active';   
+                                }
                                 $child_menu_items = $menu_object->get_child_menu_items($header_menu_items, $menu_item->ID);
                                 $has_children = !empty($child_menu_items) && is_array($child_menu_items);
                                 if(!$has_children) {?>
@@ -62,7 +65,7 @@ $header_menu_items = wp_get_nav_menu_items($header_menu_id);
                                                 // get the current menu slug and compare one by one
                                                 if($child_menu_item->object_id == get_queried_object_id()) {
                                                     $child_menu_item_classes = implode(' ', $child_menu_item->classes);
-                                                    $child_menu_item_classes .= 'current_menu_item active';   
+                                                    $child_menu_item_classes .= 'current-menu-item active';   
                                                 }
                                                 ?>
                                                 <a class="dropdown-item <?php echo !empty($child_menu_item_classes) ? $child_menu_item_classes : '' ?>" href="<?php echo esc_url($child_menu_item->url) ?>"><?php echo esc_html($child_menu_item->title) ?></a>
