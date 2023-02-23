@@ -38,6 +38,7 @@ li.dropdown i {
 }
 
 @media screen and (min-width: 768px) {
+    /* This makes the desktop submenu opens on hover */
     .dropdown:hover > .dropdown-menu {
         display: block;
     }

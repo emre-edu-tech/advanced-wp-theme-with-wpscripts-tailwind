@@ -33,7 +33,7 @@ class Assets {
         // enqueue theme style using get_stylesheet_uri()
         // IMPORTANT NOTE: filemtime() should be used while development
         // Register Styles
-        wp_register_style('limitlesswp-bootstrap-styles', LIMITLESSWP_URI_PATH . '/assets/src/library/css/bootstrap.min.css', [], '4.6', 'all');
+        wp_register_style('limitlesswp-bootstrap-styles', LIMITLESSWP_URI_PATH . '/assets/src/library/css/bootstrap.min.css', [], '5.2', 'all');
         wp_register_style('limitlesswp-main-styles', get_stylesheet_uri(), [], filemtime(LIMITLESSWP_DIR_PATH . '/style.css'), 'all');
         wp_register_style('limitlesswp-font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', [], '6.2', 'all');
 
@@ -45,7 +45,8 @@ class Assets {
 
     public function register_scripts() {
         // Register Scripts
-        wp_register_script('limitlesswp-bootstrap-script', LIMITLESSWP_URI_PATH . '/assets/src/library/js/bootstrap.min.js', ['jquery'], '4.6', true);
+        // Bootstrap 5 removed the jQuery dependency
+        wp_register_script('limitlesswp-bootstrap-script', LIMITLESSWP_URI_PATH . '/assets/src/library/js/bootstrap.min.js', [], '5.2', true);
         wp_register_script('limitlesswp-main-script', LIMITLESSWP_URI_PATH . '/assets/main.js', [], filemtime(LIMITLESSWP_DIR_PATH . '/assets/main.js'), true);
 
         // Enqueue Scripts
