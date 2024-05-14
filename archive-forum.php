@@ -1,0 +1,1 @@
+this is archive page for forum taxonomy

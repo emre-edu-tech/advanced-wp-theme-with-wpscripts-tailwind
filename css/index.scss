@@ -1,6 +1,6 @@
 // This file is suitable to write scss if you have something that you can not solve using Tailwindcss
-$body-text-color: rgba(255, 255, 255);
-$body-bg-color: blue;
+$body-bg-color: #FFF;
+$body-text-color: rgba(0, 0, 0, .7);
 
 body {
     background-color: $body-bg-color;
