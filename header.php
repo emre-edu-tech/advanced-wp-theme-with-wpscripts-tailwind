@@ -6,4 +6,8 @@
     <?php wp_head() ?>
 </head>
 <body>
-    <p>This is header file</p>
+    <!-- Site container for whole of the page content. Necessary for the full height screen -->
+    <div class="flex flex-col min-h-screen">
+        <header class="py-4 bg-gray-200">
+            This is header
+        </header>

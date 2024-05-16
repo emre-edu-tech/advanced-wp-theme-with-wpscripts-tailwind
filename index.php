@@ -7,8 +7,7 @@ $topic_args = [
 ];
 $topics_query = new WP_Query($topic_args);
 ?>
-
-<main id="main" class="site-main">
+<div id="primary" class="content-area flex-grow">
     <section class="hero">
         <div class="container">
             <h1 class="text-xl"><?php bloginfo('name') ?></h1>
@@ -16,7 +15,7 @@ $topics_query = new WP_Query($topic_args);
         </div>
     </section>
     <?php if(!empty($topics_query->have_posts())) {
-         ?>
+            ?>
         <ul>
             <?php while($topics_query->have_posts()) {
                 $topics_query->the_post(); ?>
@@ -36,6 +35,6 @@ $topics_query = new WP_Query($topic_args);
     <?php } else { ?>
         <p>No topics found</p>
     <?php } ?>
-</main>
+</div>
 
 <?php get_footer() ?>
