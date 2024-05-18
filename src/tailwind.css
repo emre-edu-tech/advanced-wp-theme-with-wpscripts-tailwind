@@ -5,8 +5,29 @@
 /* Tailwind specific css will be written here. This file is also responsible for tailiwindcss compiling */
 /* Sassy and classic css rules will be written in index.scss */
 
+/* General Page Layout */
+.content-area {
+    @apply max-w-screen-xl mx-auto px-4 lg:px-2 xl:px-0;
+}
+
+section {
+    @apply py-16 bg-gray-200;
+}
+
+section.alternative {
+    @apply bg-gray-100;
+}
+
 .page-title {
     @apply text-3xl font-bold mb-4;
+}
+
+.column-title {
+    @apply text-4xl lg:text-5xl font-semibold mb-5;
+}
+
+.section-img {
+    @apply w-full h-auto rounded-xl shadow-xl border-2 border-gray-500;
 }
 
 /* Text Utilities */
