@@ -19,15 +19,28 @@ section.alternative {
 }
 
 .page-title {
-    @apply text-3xl font-bold mb-4;
+    @apply text-4xl lg:text-5xl font-bold mb-4;
+}
+
+.section-title {
+    @apply text-4xl text-center font-bold mb-6;
 }
 
 .column-title {
-    @apply text-4xl lg:text-5xl font-semibold mb-5;
+    @apply text-3xl lg:text-4xl font-semibold mb-5;
 }
 
 .section-img {
     @apply w-full h-auto rounded-xl shadow-xl border-2 border-gray-500;
+}
+
+.theme-button-primary {
+    @apply bg-gray-600 text-white font-bold p-2 mr-4 hover:bg-gray-400 hover:text-gray-800 transition-colors duration-300 rounded-md;
+}
+
+/* Home - Service */
+.service {
+    @apply bg-gray-200 p-6 rounded-lg shadow-md;
 }
 
 /* Text Utilities */
