@@ -13,7 +13,7 @@ $topics_query = new WP_Query($topic_args);
             <div class="section-column pr-12 w-full md:w-1/2 order-2 md:order-1">
                 <h1 class="column-title"><?php bloginfo('name') ?></h1>
                 <p class="mb-4">Our team develops custom Wordpress websites. We will give you permanent advice about how to create your online presence and you can find answers to your technical questions by using our customer forums. </p>
-                <a class="theme-button-primary inline-block" href="<?php echo esc_url(site_url('/forums')) ?>"><?php _e('View Forums', 'mponsportal') ?></a>
+                <a class="theme-button-primary inline-block mr-4" href="<?php echo esc_url(site_url('/forums')) ?>"><?php _e('View Forums', 'mponsportal') ?></a>
                 <a class="theme-button-primary inline-block bg-gray-600 text-white font-bold p-2 hover:bg-gray-400 transition-colors duration-300" href="#"><?php _e('Contact us', 'mponsportal') ?></a>
             </div>
             <div class="section-column w-full md:w-1/2 order-1 md:order-2 mb-5 md:mb-0">
@@ -57,7 +57,9 @@ $topics_query = new WP_Query($topic_args);
                 <div class="service">
                     <!-- Icon -->
                     <div class="mb-4 flex justify-center">
-                        <svg class="w-10 h-10 text-gray-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M528.1 301.3l47.3-208C578.8 78.3 567.4 64 552 64H159.2l-9.2-44.8C147.8 8 137.9 0 126.5 0H24C10.7 0 0 10.7 0 24v16c0 13.3 10.7 24 24 24h69.9l70.2 343.4C147.3 417.1 136 435.2 136 456c0 30.9 25.1 56 56 56s56-25.1 56-56c0-15.7-6.4-29.8-16.8-40h209.6C430.4 426.2 424 440.3 424 456c0 30.9 25.1 56 56 56s56-25.1 56-56c0-22.2-12.9-41.3-31.6-50.4l5.5-24.3c3.4-15-8-29.3-23.4-29.3H218.1l-6.5-32h293.1c11.2 0 20.9-7.8 23.4-18.7z"/></svg>
+                        <svg class="w-10 h-10 text-gray-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M528.1 301.3l47.3-208C578.8 78.3 567.4 64 552 64H159.2l-9.2-44.8C147.8 8 137.9 0 126.5 0H24C10.7 0 0 10.7 0 24v16c0 13.3 10.7 24 24 24h69.9l70.2 343.4C147.3 417.1 136 435.2 136 456c0 30.9 25.1 56 56 56s56-25.1 56-56c0-15.7-6.4-29.8-16.8-40h209.6C430.4 426.2 424 440.3 424 456c0 30.9 25.1 56 56 56s56-25.1 56-56c0-22.2-12.9-41.3-31.6-50.4l5.5-24.3c3.4-15-8-29.3-23.4-29.3H218.1l-6.5-32h293.1c11.2 0 20.9-7.8 23.4-18.7z" />
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2 text-center">
                         E-Commerce Development
@@ -67,6 +69,56 @@ $topics_query = new WP_Query($topic_args);
             </div>
         </div>
     </section>
+    <!-- Our Projects Section -->
+    <section>
+        <div class="content-area">
+            <div class="section-title"><?php _e('Our Featured Projects', 'mponsportal') ?></div>
+            <!-- Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project">
+                    <img src="<?php echo get_theme_file_uri('/theme-img/projects/cobrasa-home-ss.webp') ?>" alt="Cobrasa GmbH" class="w-full h-48 object-cover mb-4 cursor-pointer" onclick="openLightbox('<?php echo get_theme_file_uri('/theme-img/projects/cobrasa-home-ss.webp') ?>')">
+                    <h3 class="text-xl font-bold mb-2 text-center">Cobrasa GmbH</h3>
+                    <p class="text-gray-600 mb-4 text-center">Cobrasa E-Commerce offers you a seamless online shopping experience, allowing you to explore and purchase the best Lego sets from the comfort of your home.</p>
+                    <div class="text-center">
+                        <a href="https://cobrasa-shop.de/" target="_blank" rel="nofollow" class="theme-button-primary">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project">
+                    <img src="<?php echo get_theme_file_uri('/theme-img/projects/nobusol-home-ss.webp') ?>" alt="Nobusol" class="w-full h-48 object-cover mb-4 cursor-pointer" onclick="openLightbox('<?php echo get_theme_file_uri('/theme-img/projects/nobusol-home-ss.webp') ?>')">
+                    <h3 class="text-xl font-bold mb-2 text-center">Nobusol</h3>
+                    <p class="text-gray-600 mb-4 text-center">Welcome to Nobusol, where innovation meets strategy to propel your business into the future.</p>
+                    <div class="text-center">
+                        <a href="https://nobusol.com/" class="theme-button-primary" target="_blank" rel="nofollow">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project">
+                    <img src="<?php echo get_theme_file_uri('/theme-img/projects/daydramer-home-ss.webp') ?>" alt="Daydramer" class="w-full h-48 object-cover mb-4 cursor-pointer" onclick="openLightbox('<?php echo get_theme_file_uri('/theme-img/projects/daydramer-home-ss.webp') ?>')">
+                    <h3 class="text-xl font-bold mb-2 text-center">DayDramer</h3>
+                    <p class="text-gray-600 mb-4 text-center">DayDramer E-Commerce offers you a seamless online shopping experience, allowing you to explore and purchase the best whiskies from the comfort of your home.</p>
+                    <div class="text-center">
+                        <a href="https://cobrasa-shop.de/" class="theme-button-primary" target="_blank" rel="nofollow">
+                            View Project
+                        </a>
+                    </div>
+                </div>
+            </div><!-- Grid ends -->
+            <div class="text-center mt-12">
+                <a href="https://mediapons.de/projekte/" class="theme-button-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- Lightbox Modal for the Project Image -->
+    <div id="lightbox" class="fixed inset-0 p-4 bg-black bg-opacity-75 items-center justify-center hidden">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-2xl">&times;</button>
+        <img id="lightbox-image" src="" alt="Lightbox Image" class="max-w-full lg:max-w-6xl max-h-full rounded">
+    </div>
 </div>
 
 <?php get_footer() ?>

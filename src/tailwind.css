@@ -35,12 +35,17 @@ section.alternative {
 }
 
 .theme-button-primary {
-    @apply bg-gray-600 text-white font-bold p-2 mr-4 hover:bg-gray-400 hover:text-gray-800 transition-colors duration-300 rounded-md;
+    @apply bg-gray-600 text-white font-bold p-2 hover:bg-gray-500 hover:text-white transition-colors duration-300 rounded-md;
 }
 
 /* Home - Service */
 .service {
-    @apply bg-gray-200 p-6 rounded-lg shadow-md;
+    @apply bg-gray-200 p-6 rounded-lg shadow-md flex flex-col justify-between;
+}
+
+/* Home - Service */
+.project {
+    @apply bg-gray-100 p-5 rounded-lg shadow-md flex flex-col justify-between;
 }
 
 /* Text Utilities */
