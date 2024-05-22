@@ -79,7 +79,7 @@ $topics_query = new WP_Query($topic_args);
                 <div class="project">
                     <img src="<?php echo get_theme_file_uri('/theme-img/projects/cobrasa-home-ss.webp') ?>" alt="Cobrasa GmbH" class="w-full h-48 object-cover mb-4 cursor-pointer" onclick="openLightbox('<?php echo get_theme_file_uri('/theme-img/projects/cobrasa-home-ss.webp') ?>')">
                     <h3 class="text-xl font-bold mb-2 text-center">Cobrasa GmbH</h3>
-                    <p class="text-gray-600 mb-4 text-center">Cobrasa E-Commerce offers you a seamless online shopping experience, allowing you to explore and purchase the best Lego sets from the comfort of your home.</p>
+                    <p class="text-gray-600 mb-4 text-center">Cobrasa E-Commerce offers you a seamless online shopping experience, allowing you to explore and purchase the best LEGO sets from the comfort of your home.</p>
                     <div class="text-center">
                         <a href="https://cobrasa-shop.de/" target="_blank" rel="nofollow" class="theme-button-primary">
                             View Project
@@ -190,6 +190,30 @@ $topics_query = new WP_Query($topic_args);
                     <h3 class="text-lg font-bold">Django</h3>
                 </div>
             </div><!-- Grid end -->
+        </div>
+    </section>
+    <section>
+        <div class="content-area">
+            <div class="section-title"><?php _e('Featured Project', 'mponsportal') ?></div>
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Image Section -->
+                <div class="section-column w-full md:w-1/2 mb-0 md:mb-5">
+                    <img class="section-img" src="<?php echo get_theme_file_uri('/theme-img/projects/cobrasa-home-ss.webp') ?>" alt="Cobrasa GmbH">
+                </div>
+                <!-- Content Section -->
+                <div class="section-column w-full md:w-1/2 pl-0 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-4">Cobrasa GmbH</h3>
+                    <p class="text-gray-600 mb-6">Our featured project is an e-commerce website built from scratch using WordPress and WooCommerce. This dynamic online store has been tailored specifically to meet the unique business needs of our client. With a focus on providing an engaging and user-friendly shopping experience, the website seamlessly integrates advanced e-commerce functionalities with a custom design.</p>
+                    <ul class="list-disc list-inside text-gray-600 mb-6 ml-6">
+                        <li>E-Commerce Website with WordPress and WooCommerce</li>
+                        <li>Comprehensive catalog of LEGO products</li>
+                        <li>Custom-built design and functionality</li>
+                        <li>User-friendly shopping experience</li>
+                        <li>Responsive design for mobile and desktop</li>
+                    </ul>
+                    <a class="theme-button-primary inline-block" href="https://cobrasa-shop.de/" target="_blank" rel="nofollow"><?php _e('Visit Website', 'mponsportal') ?></a>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Lightbox Modal for the Project Image -->
