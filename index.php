@@ -1,12 +1,4 @@
-<?php
-get_header();
-// get all topics with the participants that they created them
-$topic_args = [
-    'post_type' => 'topic',
-    'posts_per_page' => -1
-];
-$topics_query = new WP_Query($topic_args);
-?>
+<?php get_header(); ?>
 <div id="primary" class="flex-grow">
     <section>
         <div class="content-area flex flex-col md:flex-row items-center">
@@ -24,7 +16,7 @@ $topics_query = new WP_Query($topic_args);
     <!-- Our Services section -->
     <section class="alternative">
         <div class="content-area">
-            <div class="section-title"><?php _e('Our Services', 'mponsportal') ?></div>
+            <h2 class="section-title"><?php _e('Our Services', 'mponsportal') ?></h2>
             <!-- Services -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service -->

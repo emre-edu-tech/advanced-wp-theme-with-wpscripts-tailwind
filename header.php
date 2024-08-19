@@ -20,7 +20,7 @@
                 <!-- Desktop navigation links -->
                 <ul class="site-menu hidden md:flex space-x-4">
                     <li><a href="#" class="hover:text-gray-400">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-400">About us</a></li>
+                    <li><a href="<?php echo esc_url(site_url('/about-us')) ?>" class="hover:text-gray-400">About us</a></li>
                     <li><a href="<?php echo esc_url(site_url('/forums')) ?>" class="hover:text-gray-400">Forums</a></li>
                     <li><a href="#" class="hover:text-gray-400">Services</a></li>
                     <li><a href="#" class="hover:text-gray-400">Projects</a></li>
@@ -53,7 +53,7 @@
             </div>
             <ul class="px-3">
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Home</a></li>
-                <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
+                <li><a href="<?php echo esc_url(site_url('/about-us')) ?>" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
                 <li><a href="<?php echo esc_url(site_url('/forums')) ?>" class="block px-4 py-2 hover:bg-gray-200">Forums</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Services</a></li>
                 <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Projects</a></li>

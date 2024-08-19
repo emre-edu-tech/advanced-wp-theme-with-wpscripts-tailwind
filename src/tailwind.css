@@ -30,6 +30,10 @@ section.alternative {
     @apply text-3xl lg:text-4xl font-semibold mb-5;
 }
 
+.paragraph-title {
+    @apply text-xl lg:text-2xl font-semibold mb-4;
+}
+
 .section-img {
     @apply w-full h-auto rounded-xl shadow-xl border-2 border-gray-500;
 }
