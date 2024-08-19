@@ -45,6 +45,6 @@ function mponsportal_theme_support() {
 }
 
 add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
-  $exclude_filters[] = 'themes/your-theme-name';
+  $exclude_filters[] = 'themes/mediaponsportal';
   return $exclude_filters;
 });
