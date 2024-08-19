@@ -43,3 +43,8 @@ function mponsportal_theme_support() {
         'footer-menu' => 'Footer Menu'
     ]);
 }
+
+add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+  $exclude_filters[] = 'themes/your-theme-name';
+  return $exclude_filters;
+});
