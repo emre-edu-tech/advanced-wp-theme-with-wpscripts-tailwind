@@ -1,13 +1,1 @@
-/*!*******************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./css/style.css ***!
-  \*******************************************************************************************************************************************************************/
-/*
-THINGS TO REMEMBER
-------------------
-* This file name should be style.css for wp-scripts package to make it compile
-Classic CSS can be used using this file. 
-Most probably Block styles are a good candidate for this file.
-*/
-/* BLOCK RELATED or EXTRA STYLES WILL BE HERE */
 
-/*# sourceMappingURL=style-index.css.map*/
